@@ -1,0 +1,265 @@
+@font-face {
+    font-family: marqueeFont;
+    src: url(font/marquee\ moon.ttf);
+}
+
+@font-face {
+    font-family: resurgenFont;
+    src: url(font/resurgen.ttf);
+}
+
+@font-face {
+    font-family: AvoFont;
+    src: url(font/UTM\ Avo.ttf);
+}
+
+@font-face {
+    font-family: GradooFont;
+    src: url(font/UTM\ Gradoo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: AvoFont;
+}
+
+.header-top {
+    position: relative;
+    border-top: 5px solid #000;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+}
+
+.header-top::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -7px;
+    width: 100%;
+    border-top: 9px dotted #000;
+}
+
+.header-top--left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-top--left::before {
+    position: absolute;
+    content: '';
+    top: 5%;
+    right: 0;
+    height: 90%;
+    width: 5px;
+    background-color: #000;
+}
+
+.header-top--left img {
+    width: 20%;
+    padding-top: 10px;
+}
+
+.header-top--left h2 {
+    font-family: marqueeFont;
+    font-weight: 300;
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.header-top--right {
+    text-align: center;
+    margin: auto;
+}
+
+.header-top--right h2 {
+    font-family: resurgenFont;
+    font-weight: 300;
+    font-size: 46px;
+    padding-right: 100px;
+}
+
+.header-top--right p {
+    display: block;
+    padding-left: 50px;
+}
+
+
+/* Header--main */
+
+.header-main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.header-main::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: -3px;
+    bottom: 0px;
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+nav {
+    flex: 1;
+    padding-left: 10px;
+}
+
+nav .menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .menu li {
+    padding: 10px 0;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    padding: 0px 16px;
+    font-size: 16px;
+    border-right: 1px solid #000;
+}
+
+nav .menu li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+nav .menu li:last-child a {
+    border-right: none;
+}
+
+.form-search {
+    padding-left: 200px;
+    padding-right: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-search__input {
+    display: block;
+    padding: 4px 10px;
+    outline: none;
+}
+
+.form-search__btn {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 6px 4px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+
+/* MAIN */
+
+main {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.box-left__child {
+    padding-bottom: 12px;
+}
+
+.box-left__child h3 {
+    font-family: GradooFont;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.nav-list ul {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-list ul li {
+    padding: 4px 0;
+}
+
+.nav-list ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-list ul li a:hover {
+    text-decoration: underline;
+}
+
+.nav-list ul li a span {
+    margin-right: 4px;
+}
+
+.banner {
+    margin-bottom: 20px;
+}
+
+
+/* box-right */
+
+.choose {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-left: 20px;
+}
+
+.circle {
+    border: 14px solid #000;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle h4 {
+    margin: auto;
+    font-family: GradooFont;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+footer {
+    margin: 30px 0;
+    border: 4px dotted #000;
+    text-align: center;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
